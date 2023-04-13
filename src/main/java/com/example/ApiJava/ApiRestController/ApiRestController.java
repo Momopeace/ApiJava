@@ -62,9 +62,9 @@ public class ApiRestController {
    }
 
    
-   @GetMapping("/delete/{id}")
-   public String deletePokemon(@PathVariable int id) {
-       pokemonRepository.deleteById(id);
+   @GetMapping("/delete/{name}")
+   public String deletePokemon(@PathVariable String name) {
+       pokemonRepository.deleteByName(name);
        return "pokemon supprimé";
    }
 

@@ -15,6 +15,7 @@ public interface PokemonRepository extends JpaRepository<Pokemon, Integer> {
 
     Optional<Pokemon> findByName(String name); 
     Optional<Pokemon> findById(int id);
+    Optional<Pokemon> deleteByName(String name);
 
     
 }
